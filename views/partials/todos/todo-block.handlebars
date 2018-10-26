@@ -1,0 +1,9 @@
+<li>
+	{{todo}}
+
+	<button class="change-sleep btn btn-outline-success btn-sm" data-id="{{id}}" data-complete="{{complete}}">
+		{{#if complete}}Complete{{else}}Not Complete{{/if}}
+	</button>
+
+	<button class="delete-cat btn btn-outline-danger btn-sm" data-id="{{this.id}}">DELETE</button>
+</li>

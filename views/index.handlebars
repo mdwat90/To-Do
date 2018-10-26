@@ -1,0 +1,40 @@
+<div class="row mt-5">
+  <img class="mx-auto" src="/assets/img/to-do-list.png" alt="To-Do List Image" style="height: 150px; width: 150px">
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="mx-auto">
+      <h2>Items to Complete:</h2>
+
+      <ul>
+        {{#each todo}} {{#unless complete}} {{> todos/todo-block complete=true}} {{/unless}} {{/each}}
+      </ul>
+    </div>
+
+
+    <div class="mx-auto">
+      <h2>Items Completed:</h2>
+
+      <ul>
+        {{#each todo}} {{#if complete}} {{> todos/todo-block complete=false}} {{/if}} {{/each}}
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <div class="row mt-5">
+    <div class="mx-auto text-center">
+      <form class="create-form">
+        <h2>Add a To-Do Item:</h2>
+        <div class="form-group">
+          <input type="text" id="ca" name="name">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add To-Do!</button>
+      </form>
+    </div>
+  </div>
+</div>
